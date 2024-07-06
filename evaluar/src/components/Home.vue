@@ -3,8 +3,6 @@
         <h1>RICK AND MORTY API</h1>
     </div>
 
-    <Searchbar />
-
     <div>
         <Characters />
     </div>
@@ -13,15 +11,26 @@
 </template>
 
 <script setup>
-import Searchbar from './Searchbar.vue'
 import Characters from './Characters.vue'
-
-
 
 </script>
 
 <style lang="scss" scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
 * {
     color: black;
+    display: flex;
+    justify-content: center;
 }
+
+
+h1 {
+    font-family: 'Passion One', monospace;
+    font-weight: 900;
+    color: #333333;
+    font-size: clamp(3rem, 7vw, 5rem);
+}
+
 </style>
