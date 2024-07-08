@@ -119,16 +119,17 @@ onMounted( () => {
     align-items: center;
     justify-content: center;
 
+
     .input {
         width: 70%;
         height: 12px;
         padding: 10px 25px;
         margin: 0px 25px 0 10px;
-        font-size: 65%;
         border-radius: 0.7rem;
         border: 1px solid rgb(203, 203, 203);
         color: rgb(104, 104, 104);
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 2px;
     }
 
     .btn-search {
@@ -144,9 +145,9 @@ onMounted( () => {
         height: 13px;
         width: 60px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 50%;
         cursor: pointer;
         border: none;
+        font-size: 5px;
     }
 
     .btn-delete {
@@ -161,7 +162,6 @@ onMounted( () => {
         width: 4px;
         height: 4px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 2px;
         cursor: pointer;
         border: none;
     }
@@ -212,7 +212,7 @@ onMounted( () => {
         align-self: flex-start;
         margin: 7px 0px 0px 0px;
         align-items: baseline;
-        font-size: clamp(0.2rem, 0.5vw, .5rem);
+        font-size: 14px;
     };
 
     .valueText {
