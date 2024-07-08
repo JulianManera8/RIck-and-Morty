@@ -129,7 +129,7 @@ onMounted( () => {
         border: 1px solid rgb(203, 203, 203);
         color: rgb(104, 104, 104);
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 2px;
+        font-size: 14px;
     }
 
     .btn-search {
@@ -147,7 +147,7 @@ onMounted( () => {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         cursor: pointer;
         border: none;
-        font-size: 5px;
+        font-size: 14px;
     }
 
     .btn-delete {
@@ -164,6 +164,7 @@ onMounted( () => {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         cursor: pointer;
         border: none;
+        font-size: 14px;
     }
 
 }
