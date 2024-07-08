@@ -30,7 +30,8 @@ h1 {
     font-family: 'Passion One', monospace;
     font-weight: 900;
     color: #333333;
-    font-size: clamp(3rem, 7vw, 5rem);
+    font-size: clamp(2rem, 6vw, 4rem);
+    text-align: center;
 }
 
 </style>

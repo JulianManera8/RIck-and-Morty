@@ -3,9 +3,9 @@
     <section class="all-container">
 
         <div class="search-container">
-            <button type="reset" v-if="nameCharacter" @click.prevent="deleteName()"> X </button>
-            <input type="text" v-model="nameCharacter" placeholder="Nombre del personaje">
-            <button @click.prevent="fetchCharacters()"> Buscar <v-icon name="co-magnifying-glass" /></button>
+            <button class="btn-delete" v-if="nameCharacter" @click.prevent="deleteName()"> X </button>
+            <input class="input" type="text" v-model="nameCharacter" placeholder="Nombre del personaje">
+            <button class="btn-search" @click.prevent="fetchCharacters()"> Buscar <v-icon name="co-magnifying-glass" scale="1.4"/></button>
         </div>
 
         <div class="cards-container">
@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const arrCharacters = ref([]);
 const nameCharacter = ref('');
@@ -98,6 +98,8 @@ onMounted( () => {
 
 <style lang="scss" scoped>
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
 * {
     box-sizing: content-box;
     margin: 0;
@@ -107,6 +109,63 @@ onMounted( () => {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90vw;
+    margin-bottom: 100px;
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .input {
+        width: 70%;
+        height: 12px;
+        padding: 10px 25px;
+        margin: 0px 25px 0 10px;
+        font-size: 65%;
+        border-radius: 0.7rem;
+        border: 1px solid rgb(203, 203, 203);
+        color: rgb(104, 104, 104);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .btn-search {
+        background-color: rgb(64, 0, 137);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;   
+        gap: 5px;    
+        padding: 10px 20px;
+        margin-right: 15px;
+        border-radius: 1rem;
+        height: 13px;
+        width: 60px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 50%;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn-delete {
+        background-color: rgba(56, 0, 120, 0.459);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;    
+        padding: 10px;
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 2px;
+        cursor: pointer;
+        border: none;
+    }
+
 }
 
 .cards-container {
@@ -119,7 +178,8 @@ onMounted( () => {
 
 .card {
     background-color: rgb(255, 255, 255);
-    width: 300px;
+    width: 250px;
+    height: 285px;;
     border-radius: 7%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.102);
 }
@@ -128,17 +188,15 @@ onMounted( () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+
     margin: 10px;
 }
 
 .img-container {
     width: 100%;
-    margin-top: 3px;
-
     img {
         width: 100%;
-        height: 210px;
+        height: 180px !important;
         object-fit: cover;
         border-radius: 7%;
     };
@@ -152,12 +210,13 @@ onMounted( () => {
         color: rgb(168, 166, 166);
         display: flex;
         align-self: flex-start;
-        margin: 7px 0px;
+        margin: 7px 0px 0px 0px;
         align-items: baseline;
+        font-size: clamp(0.2rem, 0.5vw, .5rem);
     };
 
     .valueText {
-        color: black;
+        color: rgb(55, 55, 55);
         padding: 0px 8px 0px 8px;
         white-space: nowrap;
         overflow: hidden;
